@@ -1,0 +1,6 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.example.seclib" >
+	<application>
+		<activity android:name=".ui.ThirdActivity"></activity>
+	</application>
+</manifest>

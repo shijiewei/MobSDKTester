@@ -1,3 +1,4 @@
 rootProject.name='MobSDKTester'
 include ':app'
 include ':mylib'
+include ':seclib'

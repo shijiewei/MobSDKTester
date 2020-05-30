@@ -6,11 +6,13 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.mylib.R;
+import com.example.seclib.SecLib;
 
 //import cn.smssdk.gui.RegisterPage;
 
 public class SecondActivity extends Activity implements View.OnClickListener {
-	private Button smsBtn;
+	private Button goToThirdBtn;
+	private Button goToSmsBtn;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -20,14 +22,18 @@ public class SecondActivity extends Activity implements View.OnClickListener {
 	}
 
 	private void initView() {
-		smsBtn = findViewById(R.id.second_go_to_sms);
-		smsBtn.setOnClickListener(this);
+		goToThirdBtn = findViewById(R.id.second_go_to_third);
+		goToThirdBtn.setOnClickListener(this);
+		goToSmsBtn = findViewById(R.id.second_go_to_sms_btn);
+		goToSmsBtn.setOnClickListener(this);
 	}
 
 	@Override
 	public void onClick(View v) {
 		int id = v.getId();
-		if (id == R.id.second_go_to_sms) {
+		if (id == R.id.second_go_to_third) {
+			SecLib.goToThirdActivity(this);
+		} else if (id == R.id.second_go_to_sms_btn) {
 //			RegisterPage page = new RegisterPage();
 //			page.show(this);
 		}

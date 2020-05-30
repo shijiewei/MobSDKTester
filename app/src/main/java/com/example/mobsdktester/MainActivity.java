@@ -3,13 +3,15 @@ package com.example.mobsdktester;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.Button;
 
 import com.example.mylib.MyLib;
 
-import cn.smssdk.gui.RegisterPage;
+//import cn.smssdk.gui.RegisterPage;
 
 public class MainActivity extends Activity implements View.OnClickListener {
+	private Button goToSecBtn;
+	private Button goToSmsBtn;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -19,17 +21,20 @@ public class MainActivity extends Activity implements View.OnClickListener {
 	}
 
 	private void initView() {
-		TextView testTv = findViewById(R.id.btn_go_to_second_btn);
-		testTv.setOnClickListener(this);
+		goToSecBtn = findViewById(R.id.main_go_to_second_btn);
+		goToSecBtn.setOnClickListener(this);
+		goToSmsBtn = findViewById(R.id.main_add_go_to_sms_btn);
+		goToSmsBtn.setOnClickListener(this);
 	}
 
 	@Override
 	public void onClick(View v) {
 		int id = v.getId();
-		if (id == R.id.btn_go_to_second_btn) {
-//			MyLib.goToSecondActivity(this);
-			RegisterPage page = new RegisterPage();
-			page.show(this);
+		if (id == R.id.main_go_to_second_btn) {
+			MyLib.goToSecondActivity(this);
+		} else if (id == R.id.main_add_go_to_sms_btn) {
+//			RegisterPage page = new RegisterPage();
+//			page.show(this);
 		}
 	}
 }

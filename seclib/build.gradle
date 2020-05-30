@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-//apply plugin: 'com.mob.sdk'
+apply plugin: 'com.mob.sdk'
 
 android {
     compileSdkVersion 29
@@ -24,15 +24,14 @@ android {
 
 }
 
-//MobSDK {
-//    appKey "moba6b6c6d6"
-//    appSecret "b89d2427a3bc7ad1aea1e1e8c1d36bf3"
-//    SMSSDK {}
-//}
+MobSDK {
+    appKey "moba6b6c6d6"
+    appSecret "b89d2427a3bc7ad1aea1e1e8c1d36bf3"
+    SMSSDK {}
+}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation project(':seclib')
 
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 }
