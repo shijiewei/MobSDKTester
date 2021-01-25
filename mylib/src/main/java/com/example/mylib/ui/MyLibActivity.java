@@ -10,7 +10,7 @@ import com.example.seclib.SecLib;
 
 //import cn.smssdk.gui.RegisterPage;
 
-public class SecondActivity extends Activity implements View.OnClickListener {
+public class MyLibActivity extends Activity implements View.OnClickListener {
 	private Button goToThirdBtn;
 	private Button goToSmsBtn;
 
@@ -32,7 +32,7 @@ public class SecondActivity extends Activity implements View.OnClickListener {
 	public void onClick(View v) {
 		int id = v.getId();
 		if (id == R.id.second_go_to_third) {
-			SecLib.goToThirdActivity(this);
+			SecLib.goToSecLibActivity(this);
 		} else if (id == R.id.second_go_to_sms_btn) {
 //			RegisterPage page = new RegisterPage();
 //			page.show(this);

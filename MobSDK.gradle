@@ -1,0 +1,36 @@
+//MobSDK {
+//    appKey "moba6b6c6d6"
+//    appSecret "b89d2427a3bc7ad1aea1e1e8c1d36bf3"
+////    fp true
+//    MobGuard {
+//        version '1.0.8'
+//    }
+//    MobApm {
+//        version '1.1.0'
+//    }
+//    SMSSDK {
+//        version '3.6.0'
+//    }
+//    SecVerify {
+//        version '2.3.0'
+//    }
+//    MobPush {
+//        version '3.2.6'
+//    }
+//    MobLink {
+//        version '3.0.0'
+//    }
+//    ShareSDK{
+//        loopShare true
+//        ffmpeg false
+//        zxing false
+////        custEdition 'NL'
+//        devInfo {
+//            Wechat {
+//                appId "fsweweas"
+//                appSecret "sdgasvxz"
+//
+//            }
+//        }
+//    }
+//}

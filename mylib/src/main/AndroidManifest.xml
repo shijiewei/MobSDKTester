@@ -3,7 +3,7 @@
 	package="com.example.mylib">
 
 	<application>
-		<activity android:name=".ui.SecondActivity"></activity>
+		<activity android:name=".ui.MyLibActivity"></activity>
 	</application>
 
 </manifest>

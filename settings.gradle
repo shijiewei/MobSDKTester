@@ -1,4 +1,8 @@
 rootProject.name='MobSDKTester'
 include ':app'
 include ':mylib'
+project(':mylib').projectDir = new File('/mylib')
 include ':seclib'
+project(':seclib').projectDir = new File('/seclib')
+include ':thdlib'
+project(':thdlib').projectDir = new File('/thdlib')

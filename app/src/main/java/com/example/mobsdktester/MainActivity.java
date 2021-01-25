@@ -31,7 +31,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 	public void onClick(View v) {
 		int id = v.getId();
 		if (id == R.id.main_go_to_second_btn) {
-			MyLib.goToSecondActivity(this);
+			MyLib.goToMyLibActivity(this);
 		} else if (id == R.id.main_add_go_to_sms_btn) {
 //			RegisterPage page = new RegisterPage();
 //			page.show(this);

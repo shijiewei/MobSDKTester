@@ -9,7 +9,7 @@ import com.example.seclib.R;
 
 import cn.smssdk.gui.RegisterPage;
 
-public class ThirdActivity extends Activity implements View.OnClickListener {
+public class SecLibActivity extends Activity implements View.OnClickListener {
 	private Button goToSmsBtn;
 
 	@Override
