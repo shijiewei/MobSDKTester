@@ -15,19 +15,19 @@ public class SecLibActivity extends Activity implements View.OnClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_third);
+		setContentView(R.layout.activity_sec_lib);
 		initView();
 	}
 
 	private void initView() {
-		goToSmsBtn = findViewById(R.id.third_go_to_sms);
+		goToSmsBtn = findViewById(R.id.sec_lib_go_to_sms);
 		goToSmsBtn.setOnClickListener(this);
 	}
 
 	@Override
 	public void onClick(View v) {
 		int id = v.getId();
-		if (id == R.id.third_go_to_sms) {
+		if (id == R.id.sec_lib_go_to_sms) {
 			RegisterPage page = new RegisterPage();
 			page.show(this);
 		}

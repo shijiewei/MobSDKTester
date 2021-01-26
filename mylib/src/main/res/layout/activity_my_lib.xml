@@ -4,7 +4,7 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	tools:context=".ui.SecLibActivity">
+	tools:context=".ui.MyLibActivity">
 	<TextView
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
@@ -12,14 +12,23 @@
 		app:layout_constraintRight_toRightOf="parent"
 		app:layout_constraintTop_toTopOf="parent"
 		android:layout_marginTop="50dp"
-		android:text="ThirdActivity"/>
+		android:text="MyLibActivity"/>
 	<Button
-		android:id="@+id/third_go_to_sms"
+		android:id="@+id/my_lib_go_to_sec"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintLeft_toLeftOf="parent"
 		app:layout_constraintRight_toRightOf="parent"
 		app:layout_constraintTop_toTopOf="parent"
+		android:text="Go to SecLibActivity"/>
+	<Button
+		android:id="@+id/my_lib_go_to_sms_btn"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:layout_constraintTop_toBottomOf="@id/my_lib_go_to_sec"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		android:layout_marginTop="20dp"
 		android:text="Go to SMS"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

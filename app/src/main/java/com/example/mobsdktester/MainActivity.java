@@ -21,7 +21,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 	}
 
 	private void initView() {
-		goToSecBtn = findViewById(R.id.main_go_to_second_btn);
+		goToSecBtn = findViewById(R.id.main_go_to_my_lib);
 		goToSecBtn.setOnClickListener(this);
 		goToSmsBtn = findViewById(R.id.main_add_go_to_sms_btn);
 		goToSmsBtn.setOnClickListener(this);
@@ -30,7 +30,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 	@Override
 	public void onClick(View v) {
 		int id = v.getId();
-		if (id == R.id.main_go_to_second_btn) {
+		if (id == R.id.main_go_to_my_lib) {
 			MyLib.goToMyLibActivity(this);
 		} else if (id == R.id.main_add_go_to_sms_btn) {
 //			RegisterPage page = new RegisterPage();

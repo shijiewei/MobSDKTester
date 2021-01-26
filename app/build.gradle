@@ -30,15 +30,16 @@ MobSDK {
      * 1.公共库测试appkey，带有默认开启的唤星:fe0614078730/51215bd55b319a54023c1ecd23647323
      * 2.支持SMSSDK的key：2d9f9f30a86a8/0da6fae9f10701ca5c26c4270c07c221
      * 3.测试灰度发布的key：
-     * （1）Demo key - x：moba6b6c6d6、2d9f9f30a86a8、fe0614078730、moba0b0c0d0、2dbe655e88c80
-     * （2）黑名单key - b：PUSH-222142b0d16fb、Global-5def89ccd2fe
-     * （3）其他key - x/a/b：2oba6b6c6d6（x）、mobadb6c6d6（a）、18bq6b616dw（b）
+     * （1）Demo key - a：moba6b6c6d6、2d9f9f30a86a8、fe0614078730、moba0b0c0d0、2dbe655e88c80
+     * （2）白名单key - a：17adc4c482143、23c2ed51b9eae
+     * （3）其他key - x：34adc4c48214f、5dadc4c4821d1
      */
-    appKey "moba6b6c6d6"
+    appKey "34adc4c48214f"
     appSecret "b89d2427a3bc7ad1aea1e1e8c1d36bf3"
 //    fp true
 //    dewu true
 //    mobEnv 'a'
+//    SMSSDK {}
 }
 
 dependencies {
