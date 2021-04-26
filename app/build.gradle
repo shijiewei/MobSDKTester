@@ -41,6 +41,13 @@ MobSDK {
 //    mobEnv 'x'
 //    spEdition 'fxh'
     SMSSDK {}
+    MobPush {
+//        version '4.1.0'
+//        pro true
+//        devInfo {
+//            HUAWEI {}
+//        }
+    }
 }
 
 dependencies {
