@@ -33,6 +33,13 @@ MobSDK {
 //    spEdition 'nm'
 //    apiMode true
     SMSSDK {}
+    MobPush {
+//        version '3.0.4'
+//        pro true
+//        devInfo {
+//            HUAWEI {}
+//        }
+    }
 }
 
 dependencies {
