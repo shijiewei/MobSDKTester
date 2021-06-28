@@ -2,6 +2,26 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.mob.sdk'
 apply from: '../MobSDK.gradle'
 
+Calendar cal = Calendar.getInstance()
+int year = cal.get(Calendar.YEAR)
+int month  = cal.get(Calendar.MONTH) + 1
+int day = cal.get(Calendar.DAY_OF_MONTH)
+int hour = cal.get(Calendar.HOUR_OF_DAY)
+int minute = cal.get(Calendar.MINUTE)
+int seconds = cal.get(Calendar.SECOND)
+String yearStr = String.valueOf(year)
+String monthStr = month < 10 ? "0" + month : String.valueOf(month)
+String dayStr = day < 10 ? "0" + day : String.valueOf(day)
+String hourStr = hour < 10 ? "0" + hour : String.valueOf(hour)
+String minuteStr = minute < 10 ? "0" + minute : String.valueOf(minute)
+String secondsStr = seconds < 10 ? "0" + seconds : String.valueOf(seconds)
+
+//这个是manifest.xml用到的变量，使用方式：${APP_NAME}
+def placeholder = [
+        APP_NAME : "MSTester" + yearStr + monthStr + dayStr + hourStr + minuteStr,
+        APP_VERSION : yearStr + "." + monthStr + "." + dayStr
+]
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
@@ -16,13 +36,39 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    buildTypes {
+    signingConfigs{
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            storeFile file("demokey.keystore")
+            storePassword "123456"
+            keyAlias "demokey.keystore"
+            keyPassword "123456"
         }
     }
 
+    buildTypes {
+        release {
+            manifestPlaceholders = placeholder
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            manifestPlaceholders = placeholder
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            if (variant.buildType.name == 'release' || variant.buildType.name == 'debug') {
+                def fileName = "MSTester" + yearStr + monthStr + dayStr + "_" + hourStr + minuteStr + ".apk"
+                outputFileName = fileName
+            }
+        }
+    }
 }
 
 MobSDK {
@@ -41,13 +87,13 @@ MobSDK {
 //    mobEnv 'x'
 //    spEdition 'fxh'
     SMSSDK {}
-    MobPush {
+//    MobPush {
 //        version '4.1.0'
 //        pro true
 //        devInfo {
 //            HUAWEI {}
 //        }
-    }
+//    }
 }
 
 dependencies {
