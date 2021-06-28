@@ -64,7 +64,7 @@ android {
     applicationVariants.all { variant ->
         variant.outputs.all { output ->
             if (variant.buildType.name == 'release' || variant.buildType.name == 'debug') {
-                def fileName = "MSTester" + yearStr + monthStr + dayStr + "_" + hourStr + minuteStr + ".apk"
+                def fileName = "MSTester-" + yearStr + monthStr + dayStr + "_" + hourStr + minuteStr + ".apk"
                 outputFileName = fileName
             }
         }
