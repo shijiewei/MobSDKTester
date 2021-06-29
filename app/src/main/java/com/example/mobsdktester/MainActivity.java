@@ -45,6 +45,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 			page.show(this);
 		} else if (id == R.id.main_btn_agree_policy) {
 			MobSDK.submitPolicyGrantResult(true, null);
+			Toast.makeText(this, "已同意，您可以随心所欲了", Toast.LENGTH_SHORT).show();
 		} else if (id == R.id.main_btn_invoke_isforb) {
 			boolean isForb = MobSDK.isForb();
 			Toast.makeText(this, "isForb: " + isForb, Toast.LENGTH_SHORT).show();
