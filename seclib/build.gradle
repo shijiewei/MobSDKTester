@@ -32,14 +32,19 @@ MobSDK {
 //    mobEnv 'c'
 //    spEdition 'nm'
 //    apiMode true
+//    mmccs 'FP'
     SMSSDK {}
-    MobPush {
-//        version '3.0.4'
-//        pro true
+//    MobPush {
+//        version '4.0.0'
+//        pro true	// 是否使用MobPush-Pro，默认false；若同时配置version，则必须大于等于4.0.0时，该开关才能生效
 //        devInfo {
 //            HUAWEI {}
+//            XIAOMI {
+//                abroad true   // 加载小米海外版本，默认false
+//            }
+//            FCM {}
 //        }
-    }
+//    }
 }
 
 dependencies {

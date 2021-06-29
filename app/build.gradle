@@ -82,18 +82,80 @@ MobSDK {
      */
     appKey "34adc4c48214f"
     appSecret "b89d2427a3bc7ad1aea1e1e8c1d36bf3"
-//    fp true
+    /* ============= 全局开关 ============= */
+//    mmGuard false   // 只删除manifest配置
+//    mmmGuard false  // 删除jar和manifest配置
+//    wrapper true  // 加载SDKWrapper，默认flase
+//    https true
+//    domain 'jp'
+//    useMobPrivacy true  // 设置隐私开关默认值
+//    ipv6 true   // 强制ipv6
+//    autoInit false  // 关闭自动初始化（MobProvider）
+//    mobEnv 'a'  // 指定mob仓库环境：x/a，Demo key与白名单key进入a，其余key进入x
+//    apiMode true    // 开启api依赖模式（默认false，使用implementation依赖模式）
+    /* ============= 普适性定制版 ============= */
+//    googlePlay true
+//    pcy true
+//    custom true   // 用于快速对应一些客户要求的小包
+//    fp true   // 强制隐私版本（天翼云VR定制版）
+//    gpp true  // GP专版
+//    nm true // 通用无mac版
+//    fpnm true   // FP无mac版
+//    fpng true   // FP后台无gcl版
+    /*
+     * 统一定制开关
+     *
+     * 1.不区分大小写
+     * 2.赋值必须正确，若设置错误的值，会导致编译失败（找不到该包）
+     * 3.定制版默认不自动加载Guard和Apm模块，除以下版本外：FP、FPNG、FPNM、NM
+     * 4.当与fp、fpng等老开关共存时，老开关生效，spEdition失效
+     * 5.spEdition支持两种设置方式：properties方式，全局属性方式
+     * (1)由于兼容fp等老开关，spEdition的优先级为：老开关 > properties方式 > 全局属性方式
+     * (2)由于MobSDK初始化时自动加载公共库的代码，实际上properties方式与老开关不能共存，否则会出现环境冲突（设置不同定制版时）
+     * (3)properties方式与全局属性方式可以共存，优先级仍为：properties方式 > 全局属性方式
+     */
+//    spEdition 'fp'
+    /* ============= 轻推 ============= */
+    /*
+     * 轻推定制版开关
+     *
+     * 1.区分大小写
+     * 2.FP版也用该开关，此外目前还有"QTT"版本
+     */
+//    mmccs 'FP'
+//    mmc true  // 轻推开关
+    /* ============= 单客户定制版 ============= */
+//    cmcc true
+//    cmcc_sc true
+//    xhcp true   // 香哈菜谱定制版（不调用getLabel）
+//    le true
+//    shh true
 //    dewu true
-//    mobEnv 'x'
-//    spEdition 'fxh'
+//    mtdou true  // 糖豆定制版
+    permissions{
+        exclude "android.permission.READ_CONTACTS", "android.permission.WRITE_EXTERNAL_STORAGE"
+    }
     SMSSDK {}
 //    MobPush {
-//        version '4.1.0'
-//        pro true
+//        version '4.0.0'
+//        pro true	// 是否使用MobPush-Pro，默认false；若同时配置version，则必须大于等于4.0.0时，该开关才能生效
 //        devInfo {
 //            HUAWEI {}
+//            XIAOMI {
+//                abroad true   // 加载小米海外版本，默认false
+//            }
+//            FCM {}
 //        }
 //    }
+}
+
+configurations.all {
+//        exclude group: 'com.mob', module: 'MobCommonsTA'
+//        exclude group: 'com.mob', module: 'MobToolsTA'
+//        exclude group: 'com.mob', module: 'MobCommons'
+//        exclude group: 'com.mob', module: 'MobTools'
+//        exclude group: 'com.mob', module: 'MobGUI'
+//        exclude group: 'com.google.android.gms', module: 'play-services-basement'
 }
 
 dependencies {
