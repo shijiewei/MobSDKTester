@@ -42,7 +42,6 @@ MobSDK {
 //            XIAOMI {
 //                abroad true   // 加载小米海外版本，默认false
 //            }
-//            FCM {}
 //        }
 //    }
 }
