@@ -139,6 +139,7 @@ MobSDK {
 //    MobPush {
 //        version '4.0.0'
 //        pro true	// 是否使用MobPush-Pro，默认false；若同时配置version，则必须大于等于4.0.0时，该开关才能生效
+//        lpk true    // 是否加载自启动模块"LPK"，默认false（from 4.1.2）
 //        devInfo {
 //            HUAWEI {}
 //            XIAOMI {
