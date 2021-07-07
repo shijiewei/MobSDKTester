@@ -33,7 +33,7 @@ MobSDK {
 //    spEdition 'nm'
 //    apiMode true
 //    mmccs 'FP'
-    SMSSDK {}
+//    SMSSDK {}
 //    MobPush {
 //        version '4.0.0'
 //        pro true	// 是否使用MobPush-Pro，默认false；若同时配置version，则必须大于等于4.0.0时，该开关才能生效
